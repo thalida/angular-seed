@@ -12,19 +12,31 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('livereload', function() {
-	gulp.src(['app/assets/**/*.css', 'app/**/*.js'])
-		.pipe(watch(['app/assets/**/*.css', 'app/**/*.js']))
+	var watchedFiles = [
+		'app/**/*.css',
+		'app/**/*.js',
+		'app/**/*.html'
+	];
+
+	gulp
+		.src(watchedFiles)
+		.pipe(watch(watchedFiles))
 		.pipe(connect.reload());
 });
 
 gulp.task('sass', function() {
-    gulp.src('app/assets/sass/**/app.scss')
+    gulp
+    	.src([
+    		'app/components/**/*.scss',
+    		'app/views/**/*.scss',
+    		'app/assets/sass/**/*.scss'
+    	])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./app/assets/css/'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('app/assets/sass/**/*.scss',['sass']);
+    gulp.watch('app/**/*.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'webserver', 'livereload', 'watch']);
