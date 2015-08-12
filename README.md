@@ -47,31 +47,30 @@ This really depends on how complex your app is and the overall infrastructure of
 ## Directory Layout
 
 ```
-app/                    --> all of the source files for the application
-  app.css               --> default stylesheet
-  components/           --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
-  app.js                --> main application module
-  index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
-karma.conf.js         --> config file for running unit tests with Karma
-e2e-tests/            --> end-to-end tests
-  protractor-conf.js    --> Protractor config file
-  scenarios.js          --> end-to-end scenarios to be run by Protractor
+app/                            --> The source files for the angular app
+  assets/                       --> Global scss, images, audio, etc
+    sass/                       --> Global/general scss
+      app.scss                  --> Default stylesheet w/ imports to ALL other styles
+      globals.scss              --> Styles for general elements like body, a, h1, etc
+      mixins.scss               --> SCSS file for all mixins and placeholders
+
+  components/                   --> All the app specific directives, services, factories
+    helloworld/                 --> Helloworld Component Files
+      helloworld.directive.js   --> Helloworld directive logic
+      helloworld.html           --> Helloworld template used by the directive
+
+  views/
+    view1/                      --> The View1 view template + logic
+      view1.controller.js       --> The controller logic
+      view1.html                --> The view1 partial template
+      view1.scss                --> The specific stylesheet
+    view2/                      --> The View2 view template + logic
+      view2.controller.js       --> The controller logic
+      view2.html                --> The partial template
+      view2.scss                --> The specific stylesheet
+
+  app.js                        --> The main app module
+  index.html                    --> The main html app template
 ```
 
 ## Updating Angular
