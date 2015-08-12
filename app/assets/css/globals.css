@@ -14,11 +14,3 @@ a {
   text-decoration: none; }
   a:hover {
     color: rgba(0, 0, 255, 0.6); }
-
-.view1-page {
-  border-top: 2px solid red;
-  padding: 20px; }
-
-.view2-page {
-  border-top: 2px solid orange;
-  padding: 20px; }
