@@ -1,4 +1,4 @@
-# tangular-seed - A Fork of the original [angular-seed](https://github.com/angular/angular-seed)
+# tangular-seed - A Fork of [angular-seed](https://github.com/angular/angular-seed)
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 
@@ -32,7 +32,7 @@ npm install
 
 ### Running the Application
 
-#### During Development
+#### In Development
 We have preconfigured the project with a simple development web server.  The simplest way to start this server is:
 
 ```
