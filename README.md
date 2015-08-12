@@ -53,12 +53,10 @@ app/                            --> The source files for the angular app
       app.scss                  --> Default stylesheet w/ imports to ALL other styles
       globals.scss              --> Styles for general elements like body, a, h1, etc
       mixins.scss               --> SCSS file for all mixins and placeholders
-
   components/                   --> All the app specific directives, services, factories
     helloworld/                 --> Helloworld Component Files
       helloworld.directive.js   --> Helloworld directive logic
       helloworld.html           --> Helloworld template used by the directive
-
   views/
     view1/                      --> The View1 view template + logic
       view1.controller.js       --> The controller logic
@@ -68,7 +66,6 @@ app/                            --> The source files for the angular app
       view2.controller.js       --> The controller logic
       view2.html                --> The partial template
       view2.scss                --> The specific stylesheet
-
   app.js                        --> The main app module
   index.html                    --> The main html app template
 ```
