@@ -19,15 +19,14 @@ cd angular-seed
 
 ### Install Dependencies
 
-We have two kinds of dependencies in this project: tools and angular framework code. The tools help us manage and test the application.
+We have two kinds of dependencies in this project: tools and angular framework code.
 
 * We get the tools we depend upon via `npm`, the [node package manager][npm].
 * We get the angular code via `bower`, a [client-side code package manager][bower].
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
-
 ```
 npm install
+bower install
 ```
 
 ### Running the Application
@@ -36,10 +35,10 @@ npm install
 We have preconfigured the project with a simple development web server.  The simplest way to start this server is:
 
 ```
-npm start
+gulp
 ```
 
-Now browse to the app at `http://localhost:8000/app/`.
+Now browse to the app at `http://localhost:8000`.
 
 #### In Production
 
